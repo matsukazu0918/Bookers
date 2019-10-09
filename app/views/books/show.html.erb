@@ -1,0 +1,14 @@
+<div class="show">
+
+    <% if flash[:create] %>
+        <p class="success"><%= flash[:create] %></p>
+    <% end %>
+    <% if flash[:update] %>
+        <p class="success"><%= flash[:update] %></p>
+    <% end %>
+
+    <p><span>Title:</span> <%= @book.title %></p>
+    <p><span>body:</span> <%= @book.body %></p>
+
+    <p><%= link_to 'Edit', edit_book_path %> | <%= link_to 'Back', books_path %></p>
+</div>
